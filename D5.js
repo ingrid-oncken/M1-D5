@@ -329,7 +329,6 @@ const isTodayMyBirthday = function () {
 */
 
 cars = { carName: "Ford", models: ["Fiesta", "Focus", "Mustang"] }
-// console.log(cars)
 
 const deleteProp = function (object, p) {
   delete object[p]
