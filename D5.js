@@ -430,15 +430,14 @@ const sumAllTheYears = function () {
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
 */
-let string = "strive school"
-console.log (string.indexOf("strive"))
+
 
 const searchByTitle = function (Title) {
-  let j=0
-  let MoviesByTitle=[]
+  Title = Title.toLowerCase()
+  let j = 0
+  let MoviesByTitle = []
   for (let i = 0; i < movies.length; i++) {
-    if (movies[i].Title.indexOf(Title)) {
-      // console.log(movies[i].Title.indexOf(Title)===4)
+    if (movies[i].Title.toLowerCase().search(Title) != -1) {
       MoviesByTitle[j] = movies[i]
       j++
     }
@@ -446,7 +445,7 @@ const searchByTitle = function (Title) {
   return MoviesByTitle
 }
 
-// console.log(searchByTitle("Avengers"))
+// console.log(searchByTitle("avengers"))
 
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
